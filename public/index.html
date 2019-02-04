@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <title>Calibrate Kombucha</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <!-- POPUP LAYER -->
+  <div id="pop-up-layer" class="pop-up-layer">
+    <div id="pop-up" class="pop-up">
+      <h1 class="pop-up-title">Find Calibrate Kombucha</h1>
+      <h2 class="pop-up-sub">Subscribe to our email to hear about popup locations</h2>
+      <div class="sub-fields">
+        <form action="/subscribe" method="POST">
+          <input class="email-input" placeholder="your email" name='from'>
+          <button class="email-sub" type="submit" action='/subscribe' method='POST' >subscribe</button>
+        </form>    
+      </div>
+      <button id="close-pop-up" class="close-btn">x</button>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <navbar class="shadow-sm p-3 mb-5 bg-white">
+    <!-- "for" keyword looks for an id -->
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <a href="#home"><img class="navbar-logo" src="img/ck-logo.png" alt="logo"></a>
+    <!--Used class for CSS and id for interactivity-->
+    <!--This tag is an invisible checkbox that makes the mobile hamburger menu work-->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <ul class="nav-right">
+      <li class="nav-item"><a href="#home">Home</a></li>
+      <li class="nav-item"><a href="#mission">About</a></li>
+      <li class="nav-item"><a href="#features">Ingredients</a></li>
+      <!-- <li class="nav-item"><a href="#testim">Stocklists</a></li> -->
+      <li class="nav-item"><a href='email.html'>Contact</a></li>
+    </ul>
+  </navbar>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="inner-hero">
+      <div class="overlay-text">
+        <h1>Calibrate CBD Kombucha</h1>
+        <p>Modern potions to balance your systems</p>
+        <p>Available at surprise pop-up locations in Oakland, CA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="mission-container" id="mission">
+    <h1 class="mission-headline">What is <span class="center-text">Calibrate </span></span>Kombucha?</h1>
+    <p class="mission-text">
+      Calibrate is an ingenious, game-changing beverage that combines the triple influence 
+      of probiotics, cannabinoids, and organically grown foods to unlock the full potential of the human experience. 
+      Put simply, Calibrate is a healing potion that celebrates vitality. Imagine the level at which your mind, 
+      body, and spirit could naturally function if unburdened from stress, pain, anxiety, fatigue, inflammation, 
+      and other discomforts. Consider the capacity and willingness to heal others that might open up if you personally 
+      began to heal. Calibrate envisions a future where as individuals heal, communities heal, nations heal, and the 
+      planet in turn can heal. 
+    </p>
+    <p class="mission-text-emphasis">Ambitious goals? Most definitely. </p>
+    <p class="mission-text">And we’re getting it all started in Oakland, California. </p>
+    <p>
+      <img class="oakland-map" src="img/map-oakland.png" alt="map-oakland" />
+    </p>
+    <p class="mission-text-emphasis">
+      <span>CALIFORNIA</span> +
+      <span>CELEBRATE</span> =
+      <span>CALIBRATE</span>
+    </p>
+    <p class="mission-text">
+      Calibrate embraces the ephemeral nature of all creation. This mindset draws us to making our potions 
+      available at temporary pop-up spots around town to intrigue and delight those walking the streets of 
+      Oakland. All vending activities comply with the <a href="https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201720180SB946">Safe Sidewalk Vending Act</a>. 
+    </p>
+  </section>
+
+  <!-- PRODUCT INFO -->
+  <section class="features" id="features">
+    <div class="features-content">
+      <h3 class="feature-headline">Key Components</h3>
+    </div>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <img src="img/cbd-icon.png" class="feature-icon">
+        <p class="feature-title">Cannabidiol</p>
+        <p class="feature-text">Established plant medicine. Our bodies are naturally receptive to CBD,
+          making it effective for pain relief, trauma resilience, cancer prevention, and countless other uses.</p>
+      </div>
+      <div class="feature-card">
+        <img src="img/probiotics-icon.png" class="feature-icon anxiety">
+        <p class="feature-title">Probiotics</p>
+        <p class="feature-text">Living microorganisms that improve digestion, promote a healthy gut biome
+          (your ecosystem of intestinal bacteria), strengthen your immune system and improve mental health. </p>
+      </div>
+      <div class="feature-card">
+        <img src="img/turmeric-icon.png" class="feature-icon">
+        <p class="feature-title">Turmeric</p>
+        <p class="feature-text">Turmeric is an anti-inflammatory, anti-viral, and antioxidant root that is linked to
+          fighting depression, diabetes, joint pain and improve liver function. Combine with CBD for superpowers.</p>
+      </div>
+      <div class="feature-card">
+        <img src="img/spirulina-icon.png" class="feature-icon">
+        <p class="feature-title">Spirulina</p>
+        <p class="feature-text">Spirulina is a blue-green algae with exceptional protein and vitamin content. Termed
+          a superfood, it can lower cholesterol, boost metabolism, and aid in weight management.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testim" class="testim">
+    <div class="transparency">
+      <div class="wrap">
+        <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+        <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+        <ul id="testim-dots" class="dots">
+          <li class="dot active"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+        </ul>
+
+        <div id="testim-content" class="cont">
+          <div class="active">
+            <div class="img"><img src="https://image.ibb.co/hgy1M7/5a6f718346a28820008b4611_750_562.jpg" alt=""></div>
+            <h2>Lorem P. Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </div>
+
+          <div>
+            <div class="img"><img src="https://image.ibb.co/cNP817/pexels_photo_220453.jpg" alt=""></div>
+            <h2>Mr. Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </div>
+
+          <div>
+            <div class="img"><img src="https://image.ibb.co/iN3qES/pexels_photo_324658.jpg" alt=""></div>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </div>
+
+          <div>
+            <div class="img"><img src="https://image.ibb.co/kL6AES/Top_SA_Nicky_Oppenheimer.jpg" alt=""></div>
+            <h2>Lorem De Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </div>
+
+          <div>
+            <div class="img"><img src="https://image.ibb.co/gUPag7/image.jpg" alt=""></div>
+            <h2>Ms. Lorem R. Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-distributed" id="subscribe">
+    <div class="footer-left">
+      <p class="footer-links">
+        <a class="link-1" href="#">Home</a>
+        <a href="#">Pricing</a>
+        <a href="#">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="#" id="sub-btn" >Subscribe</a>
+        <a href="unsubscribe.html" id="unsub-btn" >Unsubscribe</a>
+      </p>
+      <p class="copyright">Calibrate Potions LLC &copy; 2019. All rights reserved</p>
+    </div>
+
+    <div class="footer-right">
+      <!-- <a href="#"><i class="fa fa-facebook"></i></a> -->
+      <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <!-- <a href="#"><i class="fa fa-snapchat"></i></a> -->
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+  <script src="/index.js"></script>
+</body>
+</html>

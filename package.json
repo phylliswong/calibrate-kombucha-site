@@ -1,0 +1,35 @@
+{
+  "name": "calibrate-kombucha",
+  "version": "1.0.0",
+  "description": "Calibrate Kombucha static site",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.12",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^5.3.15",
+    "morgan": "^1.9.1",
+    "nodemailer": "^5.1.1",
+    "nodemailer-mailgun-transport": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhyllisWong/calibrate-kombucha.git"
+  },
+  "keywords": [
+    "cbd"
+  ],
+  "author": "Phyllis Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PhyllisWong/calibrate-kombucha/issues"
+  },
+  "homepage": "https://github.com/PhyllisWong/calibrate-kombucha#readme"
+}

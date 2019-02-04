@@ -41,6 +41,14 @@ app.get('/email', (req, res) => {
   res.render('email');
 });
 
+app.get('/thanks', (req, res) => {
+  res.render('thanks');
+});
+
+app.get('/unsub-thanks', (req, res) => {
+  res.render('unsub-thanks.html');
+});
+
 // CREATE a new email
 app.post('/email/new', (req, res) => {
   console.log('Request: ', req.body);
@@ -64,7 +72,7 @@ app.post('/email/new', (req, res) => {
     console.log('Response: ', info);
     res.redirect('/');
   }).catch((err) => {
-    console.log('Error: ', err);
+    console.log('Error sending email: ', err.message);
   });
 });
 
@@ -81,7 +89,7 @@ app.post('/subscribe', (req, res) => {
     to: 'info@calibratekombucha.com',
     subject: data.subject,
     template: {
-      name: 'email.hbs',
+      name: 'thanks.hbs',
       engine: 'handlebars',
       context: data,
     },
@@ -92,9 +100,9 @@ app.post('/subscribe', (req, res) => {
     email.save()
       .then((savedEmail) => {
         // FIXME: change this to redirect to a route and serve up the index.html
-        console.log(savedEmail);
-        res.send('thanks.html');
-      }).catch((error) => { console.log(error.message); });
+        console.log('Saved email', savedEmail);
+        res.redirect('/thanks');
+      }).catch((error) => { console.log('Error saving email', error.message); });
   }).catch((err) => {
     console.log('Error: ', err);
   });
@@ -123,12 +131,14 @@ app.post('/unsubscribe', (req, res) => {
       console.log('Response: ', info);
       Email.findByIdAndRemove(req.params.id, req.body)
       .then(emailAddress => {
-        res.send('unsub-thanks.html')
+        res.redirect('/unsub-thanks')
       }).catch((err) => {
       console.log(`Error: ${err.message}`);
     })
   })
 });
+
+
 
 // DATABASE
 mongoose.connect(

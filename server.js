@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-template */
@@ -102,14 +103,14 @@ app.post('/subscribe', (req, res) => {
   }).then((info) => {
     console.log('Response: ', info);
     const email = new Email();
-    email.emailAdress = req.body.from;
+    email.name = req.body.from;
     email.save()
       .then((savedEmail) => {
-        // FIXME: change this to redirect to a route and serve up the index.html
-        console.log('Saved email', savedEmail);
         res.redirect('/thanks.html');
       }).catch((error) => {
         console.log('Error saving email', error.message);
+        // eslint-disable-next-line no-alert
+        alert('There was an error saving your email address. Please try again.');
       });
   }).catch((err) => {
     console.log('Error: ', err);
@@ -137,7 +138,7 @@ app.post('/unsubscribe', (req, res) => {
     // Delete
     Email.findByIdAndRemove(req.params.id, req.body)
       .then((removedEmail) => {
-        res.redirect('/');
+        res.redirect('/unsub-thanks.html');
       }).catch((err) => {
         console.log(`Error: ${err.message}`);
       });
@@ -147,7 +148,7 @@ app.post('/unsubscribe', (req, res) => {
 // DATABASE
 mongoose.connect(
   process.env.MONGODB_URI, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
   },
   () => {
     console.log('Connected to Calibrate Kombucha Database');

@@ -2,9 +2,8 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const EmailSchema = new Schema({
-  emailAddress: String,
+  name: String,
 });
-
 
 
 const Email = mongoose.model('Email', EmailSchema);

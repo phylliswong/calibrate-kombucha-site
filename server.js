@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const nodemailer = require('nodemailer');
 const mg = require('nodemailer-mailgun-transport');
+const serveStatic = require('serve-static');
 const Email = require('./models/email');
 
 const auth = {
@@ -26,11 +27,17 @@ const nodemailerMailgun = nodemailer.createTransport(mg(auth));
 /* ************************
         MIDDLEWARE
 ************************ */
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true,
+}));
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('default')); // display each request in the console
 // parse application/json
 app.use(bodyParser.json());
+
+app.use(serveStatic('public/', {
+  index: ['index.html', 'email.html', 'thanks.html'],
+}));
 
 
 // ======= API calls =======
@@ -43,9 +50,6 @@ app.get('/email', (req, res) => {
   res.render('email');
 });
 
-app.get('/thanks', (req, res) => {
-  res.render('index');
-});
 
 app.get('/unsub-thanks', (req, res) => {
   res.render('unsub-thanks.html');
@@ -103,8 +107,10 @@ app.post('/subscribe', (req, res) => {
       .then((savedEmail) => {
         // FIXME: change this to redirect to a route and serve up the index.html
         console.log('Saved email', savedEmail);
-        res.redirect('/');
-      }).catch((error) => { console.log('Error saving email', error.message); });
+        res.redirect('/thanks.html');
+      }).catch((error) => {
+        console.log('Error saving email', error.message);
+      });
   }).catch((err) => {
     console.log('Error: ', err);
   });
@@ -140,9 +146,12 @@ app.post('/unsubscribe', (req, res) => {
 
 // DATABASE
 mongoose.connect(
-  process.env.MONGODB_URI,
-  { useNewUrlParser: true },
-  () => { console.log('Connected to Calibrate Kombucha Database'); },
+  process.env.MONGODB_URI, {
+    useNewUrlParser: true
+  },
+  () => {
+    console.log('Connected to Calibrate Kombucha Database');
+  },
 );
 
 // SEVER

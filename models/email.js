@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const EmailSchema = new Schema({
-  name: String,
+  emailAddress: String,
 });
 
 

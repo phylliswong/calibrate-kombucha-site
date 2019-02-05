@@ -98,7 +98,7 @@ app.post('/subscribe', (req, res) => {
   }).then((info) => {
     console.log('Response: ', info);
     const email = new Email();
-    email.name = req.body.from;
+    email.emailAdress = req.body.from;
     email.save()
       .then((savedEmail) => {
         // FIXME: change this to redirect to a route and serve up the index.html

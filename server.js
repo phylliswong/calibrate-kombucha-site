@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 /* eslint-disable prefer-template */
 /* eslint-disable no-path-concat */
 /* eslint-disable prefer-destructuring */
@@ -42,7 +44,7 @@ app.get('/email', (req, res) => {
 });
 
 app.get('/thanks', (req, res) => {
-  res.render('thanks');
+  res.render('index');
 });
 
 app.get('/unsub-thanks', (req, res) => {
@@ -101,7 +103,7 @@ app.post('/subscribe', (req, res) => {
       .then((savedEmail) => {
         // FIXME: change this to redirect to a route and serve up the index.html
         console.log('Saved email', savedEmail);
-        res.redirect('/thanks');
+        res.redirect('/');
       }).catch((error) => { console.log('Error saving email', error.message); });
   }).catch((err) => {
     console.log('Error: ', err);
@@ -126,19 +128,15 @@ app.post('/unsubscribe', (req, res) => {
       context: data,
     },
   }).then((info) => {
-
     // Delete
-      console.log('Response: ', info);
-      Email.findByIdAndRemove(req.params.id, req.body)
-      .then(emailAddress => {
-        res.redirect('/unsub-thanks')
+    Email.findByIdAndRemove(req.params.id, req.body)
+      .then((removedEmail) => {
+        res.redirect('/');
       }).catch((err) => {
-      console.log(`Error: ${err.message}`);
-    })
-  })
+        console.log(`Error: ${err.message}`);
+      });
+  });
 });
-
-
 
 // DATABASE
 mongoose.connect(

@@ -13,6 +13,7 @@
   --copyright-grey: #8f9296;
   --logoOrange: #FABB51;
   --logoGreen: #9DC167;
+  --mediumGreen: #00291B;
   --darkestGreen: #012820;
   --footerGreen: #3a5313;
   --background-grey: #ebebeb;
@@ -522,7 +523,7 @@ FOOTER
 }
 
 .faq-container {
-  margin: 1rem;
+
   margin-top: 60px;
   padding: 1rem;
 
@@ -545,15 +546,15 @@ FOOTER
 }
 
 .line {
-  margin: 70px 0 70px 0;
-  height: 1px;
+  /* margin: 70px 0 70px 0; */
+  margin: 0;
+  /* height: 1px; */
 }
 
 .q-and-a {
-  margin: 2rem;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 1rem;
+  padding: 60px;
+  height: auto;
+  width: 100%;
 }
 
 #q2 {
@@ -806,11 +807,24 @@ FULLSCREEN MEDIA QUERY
   .mission-text {
     margin: 2rem;
     font-size: 1.3rem;
+    color: var(--mediumGreen);
   }
 
   .mission-text-emphasis {
-    margin: 2rem;
+    margin-top: 2rem;
+    /* margin-left: -0.6rem; */
     font-size: 3rem;
+    color: var(--logoOrange);
+  }
+
+  .mission-text-emphasis-2 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: var(--logoGreen);
+  }
+
+  .mission-text-inner {
+    color: var(--logoOrange);
   }
 
 
@@ -910,7 +924,7 @@ TESTIMONIALS Full Screen
     align-items: center;
 
     padding: 1rem 0;
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 33, 37, 0.85)), url(https://meral.ar-lab.ga/img/testimonials-bg.jpg);
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 33, 37, 0.85)), url('./img/2F-bottles-kombucha.jpg');
     background-size: cover;
     color: #a1aaad;
   }
@@ -1036,23 +1050,35 @@ TESTIMONIALS Full Screen
 
   .testim .cont div .img img {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     margin: auto;
     border-radius: 50%;
+
+    object-fit: cover;
   }
 
   .testim .cont div h2 {
     color: var(--logoOrange);
     font-size: 1em;
     margin: 15px 0;
+    padding-top: 1rem;
   }
 
-  .testim .cont div p {
+  .testim-role {
+    font-size: 0.9rem !important;
+    margin-top: -0.9rem !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .testim-body {
     font-size: 1.15em;
     color: #eee;
     width: 80%;
     margin: auto;
+    padding-top: 1rem;
+
+    text-align: justify;
   }
 
   .testim .cont div.active .img img {
@@ -1096,11 +1122,11 @@ TESTIMONIALS Full Screen
   }
 
   .testim .cont div.inactive p {
-    -webkit-animation: testim-content-out .5s ease-in-out forwards;
-    -moz-animation: testim-content-out .5s ease-in-out forwards;
-    -ms-animation: testim-content-out .5s ease-in-out forwards;
-    -o-animation: testim-content-out .5s ease-in-out forwards;
-    animation: testim-content-out .5s ease-in-out forwards;
+    -webkit-animation: testim-content-out .3s ease-in-out forwards;
+    -moz-animation: testim-content-out .3s ease-in-out forwards;
+    -ms-animation: testim-content-out .3s ease-in-out forwards;
+    -o-animation: testim-content-out .3s ease-in-out forwards;
+    animation: testim-content-out .3s ease-in-out forwards;
   }
 
   @-webkit-keyframes testim-scale {

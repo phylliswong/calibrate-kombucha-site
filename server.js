@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({
   extended: true,
 }));
 app.use(express.static(__dirname + '/public'));
-app.use(morgan('default')); // display each request in the console
+app.use(morgan('combined')); // display each request in the console
 // parse application/json
 app.use(bodyParser.json());
 

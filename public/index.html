@@ -26,9 +26,9 @@
       <h1 class="pop-up-title">Find Calibrate Kombucha</h1>
       <h2 class="pop-up-sub">Subscribe to hear about pop-up locations</h2>
       <div class="sub-fields">
-        <form action="/subscribe" method="POST">
-          <input class="email-input" placeholder="your email" name='from'>
-          <button class="email-sub" type="submit" action='/subscribe' method='POST' >subscribe</button>
+        <form class='pop-up-form' action="/subscribe" method="POST">
+          <input class="form-control email-input" placeholder="your email" name='from'>
+          <button class=" btn btn-primary email-sub" type="submit" action='/subscribe' method='POST' >subscribe</button>
         </form>    
       </div>
       <button id="close-pop-up" class="close-btn">x</button>
@@ -48,8 +48,9 @@
     <ul class="nav-right">
       <li class="nav-item"><a href="/">Home</a></li>
       <li class="nav-item"><a href="#mission">About</a></li>
-      <li class="nav-item"><a href="#features">Ingredients</a></li>      
-      <li class="nav-item"><a href='email.html'>Contact</a></li>
+      <li class="nav-item"><a href="#features">Ingredients</a></li>   
+      <li class="nav-item"><a href="faq.html">FAQ</a></li>   
+      <li class="nav-item"><a href="#pop-up-layer" id="sub-btn" >Subscribe</a></li>  
     </ul>
   </navbar>
 
@@ -83,10 +84,9 @@
       <img class="oakland-map" src="img/map-oakland.png" alt="map-oakland" />
     </p>
     <p class="mission-text-emphasis-2">
-      CALI<span class="mission-text-emphasis">FORNIA + CALI</span>
-      <span class="mission-text-emphasis-2">BRATE</span> =
+      CALIFORNIA <span class="mission-text-emphasis">+</span> CELEBRATE <span class="mission-text-emphasis">=</span> <strong class="mission-text-emphasis-2">CALIBRATE</strong>
     </p>
-    <strong class="mission-text-emphasis-2">CALIBRATE</strong>
+    
     <p class="mission-text">
       Calibrate embraces the ephemeral nature of all creation. This mindset draws us to making our potions 
       available at temporary pop-up spots around town to intrigue and delight those walking the streets of 
@@ -141,7 +141,6 @@
           <li class="dot"></li>
           <li class="dot"></li>
           <li class="dot"></li>
-          <!-- <li class="dot"></li> -->
         </ul>
 
         <div id="testim-content" class="cont">
@@ -222,11 +221,9 @@
   <footer class="footer-distributed" id="subscribe">
     <div class="footer-left">
       <p class="footer-links">
-        <a class="link-1" href="/">Home</a>
-        <a href="/">Pricing</a>
-        <a href="#MISSION">About</a>
-        <a href="faq.html">FAQ</a>
-        <a href="/" id="sub-btn" >Subscribe</a>        
+        <!-- <a href="faq.html">FAQ</a> -->
+        <!-- <a href="#pop-up-layer" id="sub-btn" >Subscribe</a>   -->
+        <a href='email.html'>Contact Us</a>      
       </p>
       <p class="copyright">Calibrate Potions LLC &copy; 2019. All rights reserved</p>
     </div>

@@ -1,16 +1,27 @@
+/* eslint-disable no-undef */
+/* eslint-disable func-names */
+/* eslint-disable no-multi-assign */
+/* eslint-disable no-param-reassign */
+/* eslint-disable semi */
 // ///////popup//////////////
 
 // declare default vars
 const popUpLayer = document.getElementById('pop-up-layer');
+const popUpLayer2 = document.getElementById('pop-up-layer-2');
 const closeModal = document.getElementById('close-pop-up');
 // const closeModalSubmitted = document.getElementById('email-submitted');
 
 // nav-bar button
 const subBtn = document.getElementById('sub-btn');
 
-// nav-bar button click makes the popup appear
+// footer link click makes the popup appear
 subBtn.addEventListener('click', () => {
   popUpLayer.style.display = 'flex';
+});
+
+// footer link click makes the popup appear
+subBtn.addEventListener('click', () => {
+  popUpLayer2.style.display = 'flex';
 });
 
 // close model click makes the popup disappear
@@ -18,12 +29,12 @@ closeModal.addEventListener('click', () => {
   popUpLayer.style.display = 'none';
 });
 
-// // close model submitted click makes the popup disappear
-// closeModalSubmitted.addEventListener('click', () => {
-//   popUpLayer.style.display = 'none';
-// });
+// close model click makes the popup disappear
+closeModal.addEventListener('click', () => {
+  popUpLayer2.style.display = 'none';
+});
 
-let popUpSeconds = 40;
+let popUpSeconds = 120;
 
 // trigger popup after seconds variable
 const popUpFun = window.setInterval(() => {
@@ -36,110 +47,107 @@ const popUpFun = window.setInterval(() => {
 
 // vars
 'use strict'
-var	testim = document.getElementById("testim"),
-		testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
-    testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
-    testimLeftArrow = document.getElementById("left-arrow"),
-    testimRightArrow = document.getElementById("right-arrow"),
-    testimSpeed = 4500,
-    currentSlide = 0,
-    currentActive = 0,
-    testimTimer,
-		touchStartPos,
-		touchEndPos,
-		touchPosDiff,
-		ignoreTouch = 30;
-;
+const testim = document.getElementById('testim')
+const testimDots = Array.prototype.slice.call(document.getElementById('testim-dots').children)
+const testimContent = Array.prototype.slice.call(document.getElementById('testim-content').children)
+const testimLeftArrow = document.getElementById('left-arrow')
+const testimRightArrow = document.getElementById('right-arrow')
 
-window.onload = function() {
+const testimSpeed = 5500
+const ignoreTouch = 30
 
-    // Testim Script
-    function playSlide(slide) {
-        for (var k = 0; k < testimDots.length; k++) {
-            testimContent[k].classList.remove("active");
-            testimContent[k].classList.remove("inactive");
-            testimDots[k].classList.remove("active");
-        }
+let currentSlide = 0
+let currentActive = 0
 
-        if (slide < 0) {
-            slide = currentSlide = testimContent.length-1;
-        }
+let testimTimer = null
+let	touchStartPos = null
+let	touchEndPos = null
+let	touchPosDiff = null
 
-        if (slide > testimContent.length - 1) {
-            slide = currentSlide = 0;
-        }
-
-        if (currentActive != currentSlide) {
-            testimContent[currentActive].classList.add("inactive");            
-        }
-        testimContent[slide].classList.add("active");
-        testimDots[slide].classList.add("active");
-
-        currentActive = currentSlide;
-    
-        clearTimeout(testimTimer);
-        testimTimer = setTimeout(function() {
-            playSlide(currentSlide += 1);
-        }, testimSpeed)
+window.onload = () => {
+  // Testim Script
+  const playSlide = (slide) => {
+    for (let k = 0; k < testimDots.length; k += 1) {
+      testimContent[k].classList.remove('active');
+      testimContent[k].classList.remove('inactive');
+      testimDots[k].classList.remove('active');
     }
 
-    testimLeftArrow.addEventListener("click", function() {
-        playSlide(currentSlide -= 1);
-    })
-
-    testimRightArrow.addEventListener("click", function() {
-        playSlide(currentSlide += 1);
-    })    
-
-    for (var l = 0; l < testimDots.length; l++) {
-        testimDots[l].addEventListener("click", function() {
-            playSlide(currentSlide = testimDots.indexOf(this));
-        })
+    if (slide < 0) {
+      slide = currentSlide = testimContent.length - 1
     }
 
-    playSlide(currentSlide);
+    if (slide > testimContent.length - 1) {
+      slide = currentSlide = 0
+    }
 
-    // keyboard shortcuts
-    document.addEventListener("keyup", function(e) {
-        switch (e.keyCode) {
-            case 37:
-                testimLeftArrow.click();
-                break;
-                
-            case 39:
-                testimRightArrow.click();
-                break;
+    if (currentActive !== currentSlide) {
+      testimContent[currentActive].classList.add('inactive')
+    }
 
-            case 39:
-                testimRightArrow.click();
-                break;
+    testimContent[slide].classList.add('active')
+    testimDots[slide].classList.add('active')
+    currentActive = currentSlide
+    clearTimeout(testimTimer)
 
-            default:
-                break;
-        }
+    testimTimer = setTimeout(() => {
+      playSlide(currentSlide += 1);
+    }, testimSpeed)
+  }
+
+  testimLeftArrow.addEventListener('click', () => {
+    playSlide(currentSlide -= 1);
+  })
+
+  testimRightArrow.addEventListener('click', () => {
+    playSlide(currentSlide += 1);
+  })
+
+  for (let l = 0; l < testimDots.length; l += 1) {
+    // eslint-disable-next-line no-loop-func
+    testimDots[l].addEventListener('click', function() {
+      playSlide(currentSlide = testimDots.indexOf(this));
     })
-		
-		testim.addEventListener("touchstart", function(e) {
-				touchStartPos = e.changedTouches[0].clientX;
-		})
-	
-		testim.addEventListener("touchend", function(e) {
-				touchEndPos = e.changedTouches[0].clientX;
-			
-				touchPosDiff = touchStartPos - touchEndPos;
-			
-				console.log(touchPosDiff);
-				console.log(touchStartPos);	
-				console.log(touchEndPos);	
+  }
 
-			
-				if (touchPosDiff > 0 + ignoreTouch) {
-						testimLeftArrow.click();
-				} else if (touchPosDiff < 0 - ignoreTouch) {
-						testimRightArrow.click();
-				} else {
-					return;
-				}
-			
-		})
+  playSlide(currentSlide);
+
+  // keyboard shortcuts
+  document.addEventListener('keyup', (e) => {
+    switch (e.keyCode) {
+      case 37:
+        testimLeftArrow.click();
+        break
+      case 38:
+        testimRightArrow.click();
+        break
+      case 39:
+        testimRightArrow.click();
+        break
+
+      default:
+        break
+    }
+  })
+
+  testim.addEventListener('touchstart', (e) => {
+    touchStartPos = e.changedTouches[0].clientX;
+  })
+
+  testim.addEventListener('touchend', (e) => {
+    touchEndPos = e.changedTouches[0].clientX;
+
+    touchPosDiff = touchStartPos - touchEndPos;
+
+    console.log(touchPosDiff);
+    console.log(touchStartPos);
+    console.log(touchEndPos);
+
+
+    if (touchPosDiff > 0 + ignoreTouch) {
+      testimLeftArrow.click();
+    } else if (touchPosDiff < 0 - ignoreTouch) {
+      testimRightArrow.click();
+    }
+  })
 }

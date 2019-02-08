@@ -56,6 +56,9 @@ app.get('/unsub-thanks', (req, res) => {
   res.render('unsub-thanks.html');
 });
 
+// FIXME: error handling if user doesnt want to email
+// also cancel and go back to home
+
 // CREATE a new email
 app.post('/email/new', (req, res) => {
   console.log('Request: ', req.body);

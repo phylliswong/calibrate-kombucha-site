@@ -367,8 +367,8 @@ HERO
 .inner-hero {
   margin-top: 66px;
   width: 100vw;
-  height: 35vh;
-  background-image: url("./img/beverage.jpg");
+  height: auto;
+  background-image: url('https://i.imgur.com/pKP88nl.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 1rem;

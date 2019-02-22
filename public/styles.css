@@ -17,6 +17,7 @@
   --darkestGreen: #012820;
   --footerGreen: #3a5313;
   --background-grey: #ebebeb;
+  --overlay: rgba(44, 62, 80,.6);
 }
 
 *,
@@ -59,18 +60,18 @@ p {
 
 .pop-up-layer {
 	opacity: 0%;
-	display: none; /*This is changed this with javascript*/
+	display: none; /* This is changed this with javascript */
 	position: fixed;
 	height: 100vh;
 	width: 100%;
-	background: rgba(44, 62, 80,.6); /*this is our overlay color*/
-	z-index: 3000; /*makes our layer above the rest of the page.*/
+	background: var(--overlay);
+	z-index: 3000; /* makes the layer above the rest of the page */
 }
 
 .pop-up {
-	position: fixed; /*this makes our pop-up attached to the screen*/
+	position: fixed; /* this makes pop-up attached to the screen */
 	top: 0; left: 0; right: 0; bottom: 0;
-	margin: auto; /*aligns our popup to the center*/
+	margin: auto; /* aligns popup to center */
 	height: 15rem;
 	width: 40rem;
 	display: flex;
@@ -80,7 +81,7 @@ p {
 	background: #2c3e50;
 	border-radius: 16px;
 	box-shadow: 0 4px 3px rgba(0,0,0,.3);
-	z-index: 10000000; /*Makes our pop-up above everything*/
+	z-index: 10000000; /* Makes pop-up above everything */
 	animation: hop-down;
 	animation-duration: 100ms;
 	animation-fill-mode: both;
@@ -129,11 +130,24 @@ p {
 .email-input {
   height: auto;
   margin: 0;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .email-sub {
   background: orange;
   border: 1px solid orange;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.email-input:focus, .email-sub:focus {
+  outline: 0;
+  box-shadow: none!important;
 }
 
 .email-sub:hover {
@@ -162,6 +176,10 @@ p {
 
 .close-btn:hover {
   background: darkorange;
+}
+
+..close-btn:focus {
+  outline: none;
 }
 
 /***********

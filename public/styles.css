@@ -313,6 +313,80 @@ navbar a {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
+@media (max-width: 767px) {
+  navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    min-height: 66px;
+    max-height: 70px;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .logo {
+    margin: 0;
+    margin-left: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .logo a {
+    text-decoration: none;
+    color: var(--logoGreen);
+  }
+
+  .nav-right {
+    all: unset;
+    display: flex;
+    margin-right: 2rem;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  .nav-item {
+    margin: 0;
+    padding: 0;
+    margin-left: 3em;
+  }
+
+  .nav-item a {
+    opacity: 1;
+    position: relative;
+    color: var(--logoGreen);
+  }
+
+  .nav-right a::before {
+    content: '';
+    display: block;
+    height: 7px;
+    background: var(--logoGreen);
+    background: brown;
+    background: var(--logoOrange);
+    position: absolute;
+    top: -1.6em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+  }
+
+  .nav-right a:hover::before {
+    transform: scale(1, 1);
+  }
+
+}
+
+
 .new-email {
   height: 100vh;
   width: 100%;
@@ -678,6 +752,19 @@ FOOTER
   }
 
 @media (max-width: 767px) {
+
+
+  .footer-distributed {
+    background-color: var(--darkestGreen);
+    background-color: var(--footerGreen);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    width: 100%;
+    font: normal 16px sans-serif;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .footer-distributed .footer-left,
   .footer-distributed .footer-right {
     text-align: center;
@@ -692,81 +779,6 @@ FOOTER
     /* line-height: 1.8; */
   }
 }
-
-/************************
-FULLSCREEN MEDIA QUERY
-*************************/
-
-@media screen and (min-width: 768px) {
-  navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    z-index: 100;
-    width: 100%;
-    background-color: white;
-    min-height: 66px;
-    max-height: 70px;
-  }
-
-  .nav-toggle-label {
-    display: none;
-  }
-
-  .logo {
-    margin: 0;
-    margin-left: 2rem;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .logo a {
-    text-decoration: none;
-    color: var(--logoGreen);
-  }
-
-  .nav-right {
-    all: unset;
-    display: flex;
-    margin-right: 2rem;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    list-style-type: none;
-  }
-
-  .nav-item {
-    margin: 0;
-    padding: 0;
-    margin-left: 3em;
-  }
-
-  .nav-item a {
-    opacity: 1;
-    position: relative;
-    color: var(--logoGreen);
-  }
-
-  .nav-right a::before {
-    content: '';
-    display: block;
-    height: 7px;
-    background: var(--logoGreen);
-    background: brown;
-    background: var(--logoOrange);
-    position: absolute;
-    top: -1.6em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transform-origin: left;
-    transition: transform ease-in-out 250ms;
-  }
-
-  .nav-right a:hover::before {
-    transform: scale(1, 1);
-  }
 
   /*******************
   HERO Full Screen
@@ -847,7 +859,11 @@ FULLSCREEN MEDIA QUERY
   }
 
   .oakland-map {
-    max-width: 600px;
+    margin: 2rem;
+    width: 600px;
+    height: 300px;
+    background-image: url('img/map-oakland.png');
+    background-size: cover;
   }
 
   .mission-text {
@@ -858,7 +874,6 @@ FULLSCREEN MEDIA QUERY
 
   .mission-text-emphasis {
     margin-top: 2rem;
-    /* margin-left: -0.6rem; */
     font-size: 3rem;
     color: var(--logoOrange);
   }
@@ -884,9 +899,6 @@ FULLSCREEN MEDIA QUERY
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: #ecf0f1;
-    background: #FbF7F8;
-    background: #bdc3c7;
     background: antiquewhite;
     padding: 5rem 0;  
   }
@@ -956,9 +968,9 @@ FULLSCREEN MEDIA QUERY
     font-size: 0.7rem;
   }
 
-/**********************
-TESTIMONIALS Full Screen
-**********************/
+/*************
+TESTIMONIALS 
+*************/
 
   .testim {
     width: 100%;
@@ -1576,16 +1588,6 @@ TESTIMONIALS Full Screen
 FOOTER Full Screen
 *******************/
 
-  .footer-distributed {
-    background-color: var(--darkestGreen);
-    background-color: var(--footerGreen);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    width: 100%;
-    font: normal 16px sans-serif;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-  }
 
   .footer-distributed .footer-left p {
     display: flex;
@@ -1601,7 +1603,6 @@ FOOTER Full Screen
     font-weight: bold;
     color: #ffffff;
     margin: 0 0 10px;
-    /* transition: ease .25s; */
   }
 
   .footer-distributed p.footer-links a {
@@ -1663,7 +1664,8 @@ FOOTER Full Screen
   }
 
   /* Media Queries */
-  @media (max-width: 767px) {
+  @media only screen and (max-width: 767px) {
+    
     .footer-distributed .footer-left,
     .footer-distributed .footer-right {
       text-align: center;
@@ -1678,4 +1680,3 @@ FOOTER Full Screen
       line-height: 1.8;
     }
   }
-}

@@ -312,6 +312,146 @@ navbar a {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
+navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+  min-height: 66px;
+  max-height: 70px;
+}
+
+.nav-toggle-label {
+  display: none;
+}
+
+.logo {
+  margin: 0;
+  margin-left: 2rem;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--logoGreen);
+}
+
+.nav-right {
+  all: unset;
+  display: flex;
+  margin-right: 2rem;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-item {
+  margin: 0;
+  padding: 0;
+  margin-left: 3em;
+}
+
+.nav-item a {
+  opacity: 1;
+  position: relative;
+  color: var(--logoGreen);
+}
+
+.nav-right a::before {
+  content: '';
+  display: block;
+  height: 7px;
+  background: var(--logoGreen);
+  background: brown;
+  background: var(--logoOrange);
+  position: absolute;
+  top: -1.6em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform ease-in-out 250ms;
+}
+
+.nav-right a:hover::before {
+  transform: scale(1, 1);
+}
+
+
+/* navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    min-height: 66px;
+    max-height: 70px;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .logo {
+    margin: 0;
+    margin-left: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .logo a {
+    text-decoration: none;
+    color: var(--logoGreen);
+  }
+
+  .nav-right {
+    all: unset;
+    display: flex;
+    margin-right: 2rem;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  .nav-item {
+    margin: 0;
+    padding: 0;
+    margin-left: 3em;
+  }
+
+  .nav-item a {
+    opacity: 1;
+    position: relative;
+    color: var(--logoGreen);
+  }
+
+  .nav-right a::before {
+    content: '';
+    display: block;
+    height: 7px;
+    background: var(--logoGreen);
+    background: brown;
+    background: var(--logoOrange);
+    position: absolute;
+    top: -1.6em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+  }
+
+  .nav-right a:hover::before {
+    transform: scale(1, 1);
+  } */
 
 @media (max-width: 767px) {
   navbar {
@@ -383,6 +523,76 @@ navbar a {
   .nav-right a:hover::before {
     transform: scale(1, 1);
   }
+
+  /* navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    min-height: 66px;
+    max-height: 70px;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .logo {
+    margin: 0;
+    margin-left: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .logo a {
+    text-decoration: none;
+    color: var(--logoGreen);
+  }
+
+  .nav-right {
+    all: unset;
+    display: flex;
+    margin-right: 2rem;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  .nav-item {
+    margin: 0;
+    padding: 0;
+    margin-left: 3em;
+  }
+
+  .nav-item a {
+    opacity: 1;
+    position: relative;
+    color: var(--logoGreen);
+  }
+
+  .nav-right a::before {
+    content: '';
+    display: block;
+    height: 7px;
+    background: var(--logoGreen);
+    background: brown;
+    background: var(--logoOrange);
+    position: absolute;
+    top: -1.6em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+  }
+
+  .nav-right a:hover::before {
+    transform: scale(1, 1);
+  } */
 
 }
 
@@ -752,8 +962,6 @@ FOOTER
   }
 
 @media (max-width: 767px) {
-
-
   .footer-distributed {
     background-color: var(--darkestGreen);
     background-color: var(--footerGreen);
@@ -764,17 +972,14 @@ FOOTER
     display: flex;
     justify-content: space-between;
   }
-
   .footer-distributed .footer-left,
   .footer-distributed .footer-right {
     text-align: center;
   }
-
   .footer-distributed .footer-right {
     float: none;
     margin: 0 auto;
   }
-
   .footer-distributed .footer-left p.footer-links {
     /* line-height: 1.8; */
   }
@@ -861,7 +1066,7 @@ FOOTER
   .oakland-map {
     margin: 2rem;
     width: 600px;
-    height: 300px;
+    height: auto;
     background-image: url('img/map-oakland.png');
     background-size: cover;
   }

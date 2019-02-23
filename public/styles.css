@@ -151,8 +151,9 @@ p {
 	border: none;
 	font-size: 20px;
 	transition: all 200ms;
-	cursor: pointer;
-	border-top-right-radius: 10px;
+  cursor: pointer;
+  /* TODO: change to 10 px */
+	border-top-right-radius: 6px;
 	border-bottom-left-radius: 6px;
 	padding-left: 12px;
 	padding-bottom: 8px;

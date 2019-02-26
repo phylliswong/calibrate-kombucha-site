@@ -57,6 +57,91 @@ p {
 	}
 }
 
+/***********
+  NAVBAR
+***********/
+
+navbar {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+  min-height: 66px;
+  max-height: 70px;
+  position: fixed;
+  top: 0;
+  padding: 0;
+}
+
+navbar a .navbar-logo {
+  margin-left: 1rem;
+  height: 50px;
+}
+
+.nav-toggle-label {
+  display: none;
+}
+
+.logo {
+  margin: 0;
+  margin-left: 2rem;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--logoGreen);
+}
+
+.nav-right {
+  all: unset;
+  display: flex;
+  margin-right: 2rem;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-item {
+  margin: 0;
+  padding: 0;
+  margin-left: 3em;
+}
+
+.nav-item a {
+  opacity: 1;
+  position: relative;
+  color: var(--logoGreen);
+}
+
+.nav-right a::before {
+  content: '';
+  display: block;
+  height: 7px;
+  background: var(--logoGreen);
+  background: brown;
+  background: var(--logoOrange);
+  position: absolute;
+  top: -1.6em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform ease-in-out 250ms;
+}
+
+.nav-right a:hover::before {
+  transform: scale(1, 1);
+}
+
+/***********
+  POPUP
+***********/
+
 .pop-up-layer {
 	opacity: 0%;
 	display: none; /*This is changed this with javascript*/
@@ -124,8 +209,6 @@ p {
   height: auto;
 }
 
-/* TODO: get rid of rounded corners on form */
-
 .email-input {
   height: auto;
   margin: 0;
@@ -146,9 +229,10 @@ p {
 }
 
 .close-btn {
+  /* Should be at the top right of the popup */ 
 	position: absolute;
-	top: 0;        /* we put this button at */
-	right: 0rem;    /* the top right */
+	top: 0;
+	right: 0rem;    
 	margin-top: 0rem;
 	background: orange;
 	color: white;
@@ -156,8 +240,8 @@ p {
 	font-size: 20px;
 	transition: all 200ms;
   cursor: pointer;
-  /* TODO: change to 10 px */
-	border-top-right-radius: 6px;
+
+	border-top-right-radius: 10px;
 	border-bottom-left-radius: 6px;
 	padding-left: 12px;
 	padding-bottom: 8px;
@@ -170,9 +254,8 @@ p {
 }
 
 /***********
-NAVBAR
+  EMAIL
 ***********/
-
 
 .new-email {
   height: 100vh;

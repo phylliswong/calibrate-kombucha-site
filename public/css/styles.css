@@ -233,30 +233,9 @@ label {
   border: 0 solid #3e5871;
 }
 
-
 /*******************
-FEATURES
+  THANKS
 *******************/
-
-.features {
-  /* display: none; */
-}
-
-/*******************
-  SUBSCRIBE
-*******************/
-
-.subscribe-container {
-  width: 100%;
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background: #ebebeb;
-}
 
 .thanks-header {
   padding: 1rem;
@@ -292,164 +271,13 @@ FEATURES
   border: none;
 }
 
-
-
-
-@media (max-width: 767px) {
-
-  /* Footer links */
-  .footer-distributed p.footer-links {
-    font-size: 14px;
-    font-weight: bold;
-    color: #ffffff;
-    margin: 0 0 10px;
-    transition: ease .25s;
-  }
-  .footer-distributed .footer-left .copyright {
-    text-align: center;
-    color: var(--copyright-grey);
-    font-size: 12px;
-  }
-
-  .footer-distributed .footer-right {
-      padding-top: 3rem;
-      margin-top: 3rem;
-      margin-right: 0;
-      margin-bottom: 0;
-      margin-left: 0;
-      max-width: 250px;
-    }
-  }
-
-  .footer-distributed .footer-right a {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background-color: var(--darkestGreen);
-    border-radius: 2px;
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-    line-height: 35px;
-    margin-right: 3px;
-    transition: all .25s;
-  }
-
-  .footer-distributed .footer-right a:hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-  }
-
-  .footer-distributed p.footer-links a:hover {
-    text-decoration: underline;
-  }
-
-@media (max-width: 767px) {
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-right {
-    text-align: center;
-  }
-
-  .footer-distributed .footer-right {
-    float: none;
-    margin: 0 auto;
-  }
-
-  .footer-distributed .footer-left p.footer-links {
-    /* line-height: 1.8; */
-  }
-}
-
 /************************
 FULLSCREEN MEDIA QUERY
 *************************/
 
 @media screen and (min-width: 768px) {
-  /**********************
-  FEATURES Full Screen
-  **********************/
-  .features {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background: #ecf0f1;
-    background: #FbF7F8;
-    background: #bdc3c7;
-    background: antiquewhite;
-    padding: 5rem 0;  
-  }
-
-  .feature-headline {
-    text-align: center;
-    color: #2c3e50;
-    color: brown;
-    color: var(--logoOrange);
-    color: var(--logoGreen);
-    font-size: 4rem;
-    font-weight: bold;
-    padding-bottom: 5rem;
-    text-transform: uppercase;
-  }
-
-  .blue {
-    color: #341f97;
-    color: var(--logoGreen);
-    color: brown;
-    color: var(--logoOrange);
-  }
-
-  .feature-cards {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .feature-card {
-    background: white;
-    background: #FbF7F8;
-    height: 15rem;
-    width: 15rem;
-    border-radius: 6px;
-    border: solid 0px #bdc3c7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 3px 3px 15px 1px rgb(179, 196, 183);
-  }
-
-  .feature-icon {
-    margin: 1rem 0;
-    width: 44px;
-  }
-
-  .feature-icon.anxiety {
-    margin-top: 2rem;
-  }
-
-  .feature-title {
-    font-weight: bold;
-    font-size: 1.3rem;
-    padding-bottom: 0.5rem;
-    color: var(--logoOrange);
-  }
-
-  .feature-text {
-    text-align: center;
-    font-size: 0.7rem;
-  }
-
+  
   /* FEQUENTLY ASKED QUESTIONS */
-
-
 .faq-container {
 
   margin-top: 60px;
@@ -509,9 +337,4 @@ FULLSCREEN MEDIA QUERY
   margin: 2rem;
   padding: 2rem;
 }
-
-/**********************
-TESTIMONIALS Full Screen
-**********************/
-
 }

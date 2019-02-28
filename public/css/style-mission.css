@@ -47,6 +47,10 @@ article.mission-container {
   color: var(--logoGreen);
 }
 
+.oakland-map {
+  max-width: 200px;
+}
+
 .mission-text {
   font-size: 1rem;
 }

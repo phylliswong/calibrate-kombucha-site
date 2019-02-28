@@ -1,0 +1,60 @@
+/* FEQUENTLY ASKED QUESTIONS */
+.faq-container {
+
+  margin-top: 60px;
+  padding: 1rem;
+
+  background: var(--background-grey);
+}
+
+.faq-title {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.question-container {
+  margin: 1rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.line {
+  /* margin: 70px 0 70px 0; */
+  margin: 0;
+  /* height: 1px; */
+}
+
+.q-and-a {
+  padding: 60px;
+  height: auto;
+  width: 100%;
+}
+
+#q2 {
+  background: var(--background-grey);
+}
+
+.question {
+  padding-bottom: 1rem;
+  font-size: 2.3rem;
+}
+
+.answer {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.top-link {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.bottom-text {
+  margin: 2rem;
+  padding: 2rem;
+}

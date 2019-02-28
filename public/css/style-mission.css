@@ -1,0 +1,115 @@
+/*******************
+MISSION
+*******************/
+
+article {
+  background: white;
+}
+
+article.mission-container {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+.mission-container h1 {
+  padding-bottom: 1rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.mission-container {
+  margin: 0;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #bdc3c7;
+  background-color: white;
+}
+
+.mission-headline {
+  text-align: center;
+  color: #2c3e50;
+  color: brown;
+  color: var(--logoOrange);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.mission-headline .center-text {
+  color: var(--logoGreen);
+}
+
+.mission-text {
+  font-size: 1rem;
+}
+
+/**********************
+MISSION Full Screen
+**********************/
+@media screen and (min-width: 768px) {
+  .mission-container {
+    margin: 1rem;
+    padding: 3rem;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #bdc3c7;
+    background-color: white;
+  }
+
+  .mission-container h1 {
+    padding-bottom: 1rem;
+    font-size: 5vw;
+  }
+
+  .mission-headline {
+    text-align: center;
+    color: #2c3e50;
+    color: brown;
+    color: var(--logoOrange);
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  .mission-headline .center-text {
+    color: var(--logoGreen);
+  }
+
+  .oakland-map {
+    max-width: 600px;
+  }
+
+  .mission-text {
+    margin: 2rem;
+    font-size: 1.3rem;
+    color: var(--mediumGreen);
+  }
+
+  .mission-text-emphasis {
+    margin-top: 2rem;
+    /* margin-left: -0.6rem; */
+    font-size: 3rem;
+    color: var(--logoOrange);
+  }
+
+  .mission-text-emphasis-2 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: var(--logoGreen);
+  }
+
+  .mission-text-inner {
+    color: var(--logoOrange);
+  }
+}

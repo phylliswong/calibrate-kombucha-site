@@ -1,0 +1,69 @@
+/*******************
+HERO
+*******************/
+
+.inner-hero {
+  margin-top: 66px;
+  width: 100vw;
+  height: 35vh;
+  background-image: url('../img/beverage-min-crop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1rem;
+
+  /* Needed to show the background image */
+  color: var(--colorClear);
+}
+
+.hero h1 {
+  font-size: 1.5rem;
+}
+
+.hero p {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  /*******************
+  HERO Full Screen
+  *******************/
+
+  .hero {
+    padding-bottom: 0;
+    height: auto;
+  }
+
+  .inner-hero {
+    margin-top: 66px;
+    width: 100%;
+    background-position: center;
+    height: 50vh;
+    min-height: 400px;
+    max-height: 600px;
+    padding: 0;
+    color: white;
+  }
+
+  .overlay-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 0 2rem 2rem;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    height: 100%;
+  }
+
+  .overlay-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  .overlay-text p {
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+}

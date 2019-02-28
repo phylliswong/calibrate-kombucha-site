@@ -242,7 +242,7 @@ HERO
   margin-top: 66px;
   width: 100vw;
   height: 35vh;
-  background-image: url("./img/beverage.jpg");
+  background-image: url('../img/beverage-min-crop.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 1rem;
@@ -711,7 +711,7 @@ TESTIMONIALS Full Screen
     align-items: center;
 
     padding: 1rem 0;
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 33, 37, 0.85)), url('./img/2F-bottles-kombucha.jpg');
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 33, 37, 0.85)), url('../img/2F-bottles-kombucha.jpg');
     background-size: cover;
     color: #a1aaad;
   }

@@ -1,5 +1,6 @@
-const assert = require('assert');
+/* eslint-disable no-console */
+/* eslint-disable no-undef */
 
-it('should do something', function() {
-  return true;
-});
+const testTrue = it('should do something', () => true);
+
+console.log(testTrue);

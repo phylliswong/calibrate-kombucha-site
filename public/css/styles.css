@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,400');
 @import url(//cdn.rawgit.com/rtaibah/dubai-font-cdn/master/dubai-font.css);
 
+
 /* CSS variables */
 :root {
   --navbarGreen: #008542;
@@ -124,16 +125,18 @@ p {
   height: auto;
 }
 
-/* TODO: get rid of rounded corners on form */
-
 .email-input {
   height: auto;
   margin: 0;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .email-sub {
   background: orange;
   border: 1px solid orange;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .email-sub:hover {

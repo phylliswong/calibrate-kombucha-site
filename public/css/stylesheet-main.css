@@ -19,3 +19,31 @@
   --footerGreen: #3a5313;
   --background-grey: #ebebeb;
 }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  min-height: 100%;
+  font-family: roboto;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  overflow-x: hidden;
+}
+
+p {
+  margin-bottom: 0;
+}

@@ -155,3 +155,51 @@
   outline: none;
   border: none;
 }
+
+@media screen and (min-width: 768px) {
+	.pop-up-layer {
+		max-width: 100%;
+	}
+
+	.pop-up {
+		max-width: 100%;
+	}
+}
+
+@media screen and (min-width: 320px) {
+	.pop-up-layer {
+		max-width: 100%;
+	}
+
+	.pop-up {
+		position: relative;
+		top: -5rem;
+		max-width: 100%;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		height: 10rem;
+	}
+
+	.pop-up-title {
+		font-size: 1rem;
+	}
+
+	.pop-up-sub {
+		position: relative;
+		bottom: -1rem;
+		padding-top: .75rem;	
+		font-size: 0.75rem;
+	}
+
+	.sub-fields {
+		position: relative;
+		bottom: -1rem;	
+		margin: 0.5rem;
+		width: 100%;
+    padding: 0 .5rem;
+	}
+
+	.email-input, .email-sub {
+		font-size: .75rem;
+	}
+}

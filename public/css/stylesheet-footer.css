@@ -1,9 +1,7 @@
 /*******************
-FOOTER
+  FOOTER
 *******************/
-
-.footer-distributed {
-  background-color: var(--darkestGreen);
+.footer-distributed {  
   background-color: var(--footerGreen);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   width: 100%;
@@ -11,196 +9,61 @@ FOOTER
   padding: 2rem;
 }
 
-.footer-distributed .footer-links {
-  color: #8f9296;
-  font-size: 14px;
-  list-style-type: none;
-}
-.footer-distributed .footer-left .copyright {
-  text-align: center;
-  color: var(--copyright-grey);
-}
-
 /* Footer links */
-.footer-distributed p.footer-links {
-  font-size: 18px;
+.footer-links {
+  color: white;
+  font-size: 2rem;
+  list-style-type: none;
   font-weight: bold;
-  color: #ffffff;
-  margin: 0 0 10px;
   transition: ease .25s;
-}
-
-.footer-distributed p.footer-links a {
-  padding-right: .5rem;
   line-height: 1.8;
   text-decoration: none;
-  color: inherit;
   transition: ease .25s;
 }
 
-.footer-distributed .footer-links .link-1:before {
-  content: none;
+.footer-links:hover {
+  background: red;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  text-decoration: underline;
 }
 
-.footer-distributed .footer-right {
+.footer-right {
   max-width: 180px;
 }
 
-/*******************
-FOOTER Full Screen
-*******************/
-@media screen and (min-width: 768px) {
-.footer-distributed {
-  background-color: var(--darkestGreen);
-  background-color: var(--footerGreen);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  width: 100%;
-  font: normal 16px sans-serif;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-distributed .footer-left p {
-  display: flex;
-  flex-direction: row;
-  color: #8f9296;
-  font-size: 14px;
-  list-style-type: none;
-}
-
-/* Footer links */
-.footer-distributed p.footer-links {
-  font-size: 18px;
-  font-weight: bold;
-  color: #ffffff;
-  margin: 0 0 10px;
-  /* transition: ease .25s; */
-}
-
-.footer-distributed p.footer-links a {
-  /* display: inline-block; */
-  padding-right: .7rem;
-  line-height: 1.8;
-  text-decoration: none;
-  color: inherit;
-  transition: ease .25s;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
-
 .footer-distributed .footer-right {
-  max-width: 180px;
-
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
-
-  /* border: 5px solid black;
-  border-radius: 5px; */
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  max-width: 250px;
 }
 
 .footer-distributed .footer-right a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  display: inline-block;
   width: 35px;
   height: 35px;
-  background-color: #33383b;
   background-color: var(--darkestGreen);
-
+  border-radius: 2px;
   font-size: 20px;
   color: #ffffff;
   text-align: center;
   line-height: 35px;
-  /* margin-right: 3px; */
+  margin-right: 3px;
   transition: all .25s;
-
-  border: 0px solid black;
-  border-radius: 5px;
 }
 
-.footer-distributed .footer-right a:hover {
-  background: #012820;
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+.footer-distributed  {
+  text-align: center;
 }
 
-/* leftside links */
-.footer-distributed p.footer-links a:hover {
-  text-decoration: none;
-  transform: scale(1.1);
+.footer-distributed .footer-right {
+  float: none;
+  margin: 0 auto;
 }
-}
+
 /* Media Queries */
 @media (max-width: 767px) {
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-right {
-    text-align: center;
-  }
-
-  .footer-distributed .footer-right {
-    float: none;
-    margin: 0 auto 20px;
-  }
-
-  .footer-distributed .footer-left p.footer-links {
-    line-height: 1.8;
-  }
-}
-
-@media (max-width: 767px) {
-
-  /* Footer links */
-  .footer-distributed p.footer-links {
-    font-size: 14px;
-    font-weight: bold;
-    color: #ffffff;
-    margin: 0 0 10px;
-    transition: ease .25s;
-  }
-  .footer-distributed .footer-left .copyright {
-    text-align: center;
-    color: var(--copyright-grey);
-    font-size: 12px;
-  }
-
-  .footer-distributed .footer-right {
-      padding-top: 3rem;
-      margin-top: 3rem;
-      margin-right: 0;
-      margin-bottom: 0;
-      margin-left: 0;
-      max-width: 250px;
-    }
-  }
-
-  .footer-distributed .footer-right a {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background-color: var(--darkestGreen);
-    border-radius: 2px;
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-    line-height: 35px;
-    margin-right: 3px;
-    transition: all .25s;
-  }
-
-  .footer-distributed .footer-right a:hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-  }
-
-  .footer-distributed p.footer-links a:hover {
-    text-decoration: underline;
-  }
 
   /* EMAIL CONTACT US */
   .back-btn-container {
@@ -294,47 +157,43 @@ FOOTER Full Screen
   .back-btn {
     margin: 0;
   }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-right {
-    text-align: center;
-  }
-
-  .footer-distributed .footer-right {
-    float: none;
-    margin: 0 auto;
-  }
-
-  .footer-distributed .footer-left p.footer-links {
-    line-height: 1.8;
-  } */
 } 
 
-@media (max-width: 320px) {
-  .new-email {
-    /* all: unset; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    background-size: contain;
-  }
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .new-email {
+      /* all: unset; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      background-size: contain;
+    }
+  
+    input {
+      margin-bottom: 0.5rem;
+    }
+  
+    .email-form-container {
+      padding: 12px;
+      position: relative;
+    }
+  
+    .field {
+      padding: 10px;
+      width: 255px;
+      border: 1px solid #ccc;
+      font-size: .8em;
+    }
 
-  input {
-    margin-bottom: 0.5rem;
-  }
-
-  .email-form-container {
-    padding: 12px;
-    position: relative;
-  }
-
-  .field {
-    padding: 10px;
-    width: 255px;
-    border: 1px solid #ccc;
-    font-size: .8em;
-  }
 }
+/* iPhone 5 Style */
+/* @media (max-width: 320px) {
+  
+} */

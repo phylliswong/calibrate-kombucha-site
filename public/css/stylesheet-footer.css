@@ -65,6 +65,11 @@
 /* Media Queries */
 @media (max-width: 767px) {
 
+  a.footer-links {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
   /* EMAIL CONTACT US */
   .back-btn-container {
     width: 100%;
@@ -193,7 +198,3 @@
     }
 
 }
-/* iPhone 5 Style */
-/* @media (max-width: 320px) {
-  
-} */

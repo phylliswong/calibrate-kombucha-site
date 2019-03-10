@@ -616,4 +616,8 @@
   .testim-body {
     text-align: left;
   }
+
+  .testim .cont div h2 {
+    font-size: 1rem;
+  }
 }

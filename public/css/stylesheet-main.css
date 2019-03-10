@@ -25,25 +25,31 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
   width: 100%;
-  margin: 0;
-  padding: 0;
   height: auto;
-  width: 100%;
   min-height: 100%;
-  font-family: roboto;
 }
 
 body {
-  margin: 0;
+  /* TODO: change this to 12px for mobile */
+  font-size: 16px;
+  font-family: roboto;
   -webkit-font-smoothing: subpixel-antialiased;
   overflow-x: hidden;
+
+  box-sizing: border-box;
 }
 
-p {
+html body p {
   margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 12px;
+  }
 }

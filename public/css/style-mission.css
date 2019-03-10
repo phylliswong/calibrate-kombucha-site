@@ -2,11 +2,7 @@
 MISSION
 *******************/
 
-article {
-  background: white;
-}
-
-article.mission-container {
+.mission-container {
   top: 0;
   left: 0;
   margin: 0;
@@ -51,8 +47,21 @@ article.mission-container {
   max-width: 200px;
 }
 
-.mission-text {
+p.mission-text {
   font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+p.mission-text-emphasis {
+  margin-bottom: 1rem;
+}
+
+p.mission-text-emphasis-2 {
+  margin-bottom: 1rem;
+}
+
+img.oakland-map {
+  margin: 1rem;
 }
 
 /**********************
@@ -78,9 +87,7 @@ MISSION Full Screen
   }
 
   .mission-headline {
-    text-align: center;
-    color: #2c3e50;
-    color: brown;
+    text-align: center;    
     color: var(--logoOrange);
     font-size: 4rem;
     font-weight: bold;

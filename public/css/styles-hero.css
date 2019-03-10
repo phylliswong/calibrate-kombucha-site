@@ -36,6 +36,7 @@ HERO
   .inner-hero {
     margin-top: 66px;
     width: 100%;
+    background-size: contain !important;
     background-position: center;
     height: 50vh;
     min-height: 400px;

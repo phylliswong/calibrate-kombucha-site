@@ -8,13 +8,12 @@
 /* CSS variables */
 :root {
   --navbarGreen: #008542;
-  /* --navbarTransparency: linear-gradient(rgba(44, 62, 80, .9), rgba(44, 62, 80, .0)); */
-  --navbarTransparency: linear-gradient(rgba(24, 80, 45, .9), rgba(44, 62, 80, .0));
+  --navbarTransparency: linear-gradient(to right,#024115, rgba(44, 62, 80, .0));
   --colorClear: rgba(0, 0, 0, 0);
   --copyright-grey: #8f9296;
   --logoOrange: #FABB51;
   --logoGreen: #9DC167;
-  --mediumGreen: #00291B;
+  --mediumGreen: rgb(2, 65, 26);
   --darkestGreen: #012820;
   --footerGreen: #3a5313;
   --background-grey: #ebebeb;

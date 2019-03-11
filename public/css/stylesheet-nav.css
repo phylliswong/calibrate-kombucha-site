@@ -3,7 +3,6 @@
 *****************/
 
 navbar {
-  /* background: var(--navbarTransparency); */
   background: white;
   text-align: center;
   z-index: 100;
@@ -85,12 +84,13 @@ navbar a {
   top: 100%;
   left: 0;
   background: var(--navbarTransparency);
+  /* background: red; */
   width: 100%;
   transform: scale(1, 0);
   /* 1 keeps the width at 100%, 0 squishes height to 0% */
   transform-origin: top;
   /* lets the menu come down */
-  transition: 400ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .nav-right {
@@ -188,12 +188,11 @@ navbar a {
     color: var(--logoGreen);
   }
 
+  /* Orange bar over the text */
   .nav-right a::before {
     content: '';
     display: block;
     height: 7px;
-    background: var(--logoGreen);
-    background: brown;
     background: var(--logoOrange);
     position: absolute;
     top: -1.6em;

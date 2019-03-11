@@ -22,7 +22,6 @@
 }
 
 .footer-links:hover {
-  background: red;
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   text-decoration: underline;
@@ -65,9 +64,29 @@
 /* Media Queries */
 @media (max-width: 767px) {
 
-  a.footer-links {
+  footer.footer-distributed {
+    height: 150px;
+    padding: .5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+  }
+
+  footer a.footer-links {
     font-size: 1.4rem;
-    margin-bottom: 2rem;
+    margin: .5rem;
+  }
+
+  footer p {
+    font-size: .75rem;
+  }
+
+  footer.footer-right a {
+    margin: 1rem;
   }
 
   /* EMAIL CONTACT US */

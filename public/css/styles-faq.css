@@ -34,6 +34,10 @@
   width: 100%;
 }
 
+section.q-and-a span {
+  font-style: italic;
+}
+
 #q2 {
   background: var(--background-grey);
 }

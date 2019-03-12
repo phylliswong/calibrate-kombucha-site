@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
     <link rel="stylesheet" href="./css/stylesheet-main.css">
+    <link rel='stylesheet' href='./css/styles-popup.css'>
   <link rel="stylesheet" href="./css/stylesheet-nav.css">
   <link rel="stylesheet" href="./css/styles-faq.css">
   <link rel="stylesheet" href="./css/stylesheet-footer.css">
@@ -17,24 +18,39 @@
 
 <body>
 
+  <!-- POPUP LAYER -->
+  <div id="pop-up-layer" class="pop-up-layer">
+      <div id="pop-up" class="pop-up">
+        <h1 class="pop-up-title">Find Calibrate Kombucha</h1>
+        <h2 class="pop-up-sub">Subscribe to hear about pop-up locations</h2>
+        <div class="sub-fields">
+          <form class='pop-up-form' action="/subscribe" method="POST">
+            <input class="form-control email-input" placeholder="your email" name='from'>
+            <button class=" btn btn-primary email-sub" type="submit" action='/subscribe' method='POST' >subscribe</button>
+          </form>    
+        </div>
+        <button id="close-pop-up" class="close-btn">x</button>
+      </div>
+    </div>
+
   <!-- NAVBAR -->
   <navbar class="shadow-sm p-3 mb-5 bg-white">
-      <!-- "for" keyword looks for an id -->
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-      </label>
-      <a href="index.html"><img class="navbar-logo" src="img/ck-logo.png" alt="logo"></a>
-      <!--Used class for CSS and id for interactivity-->
-      <!--This tag is an invisible checkbox that makes the mobile hamburger menu work-->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <ul class="nav-right">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/#mission">About</a></li>
-        <li class="nav-item"><a href="/#features">Ingredients</a></li>
-        <!-- <li class="nav-item"><a href="#testim">Stocklists</a></li> -->
-        <li class="nav-item"><a href='email.html'>Contact</a></li>
-      </ul>
-    </navbar>
+    <!-- "for" keyword looks for an id -->
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span> <!-- Intentionally left blank -->
+    </label>
+    <a href="/"><img class="navbar-logo" src="img/ck-logo.png" alt="logo"></a>
+    <!--Used class for CSS and id for interactivity-->
+    <!--This tag is an invisible checkbox that makes the mobile hamburger menu work-->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <ul class="nav-right">
+      <li class="nav-item"><a href="/">Home</a></li>
+      <li class="nav-item"><a href="#mission">About</a></li>
+      <li class="nav-item"><a href="#features">Ingredients</a></li>   
+      <li class="nav-item"><a href="faq.html">FAQ</a></li>   
+      <li class="nav-item"><a href="#pop-up-layer" id="sub-btn" >Subscribe</a></li>  
+    </ul>
+  </navbar>
 
   <!-- FAQ page -->
   <div class='faq-container' id='top'>

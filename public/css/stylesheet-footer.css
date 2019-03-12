@@ -61,127 +61,133 @@
   margin: 0 auto;
 }
 
+/* EMAIL CONTACT US */
+.back-btn-container {
+  width: 100%;
+  z-index: 1000;
+}
+
+a.back-btn {
+  position: absolute;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #fabb51;
+  margin: 1rem;
+  padding: .75rem 2rem;
+
+  border-radius: 100px;
+  box-shadow: 2px 3px 3px rgba(0,0,0,.5);
+}
+
+.back-btn:hover {
+  background: darkorange;
+  text-decoration: none;
+}
+
+.back-btn:active {
+  box-shadow: 1px 2px 1px rgba(0,0,0,.5);
+}
+
+.new-email {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(157, 193, 103, 0.76), #3a531383), url('../img/typewriter.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-form-container {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%,-50%);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 1px 2px 2px rgba(0,0,0,.5);
+  background: #fff;
+}
+
+.email-form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-form {
+  color: var(--logoOrange);
+  font-size: 1.5em;
+  line-height: 2em;
+  text-align: center;
+  padding: 10px 0;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+
+label {
+  margin: 0;
+  padding: 0;
+}
+
+.field {
+  padding: 10px;
+  width: 304px;
+  border: 1px solid #ccc;
+  font-size: .8em;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  padding: 15px;
+  font-size: .9em;
+  color: #fff;
+  background-color: var(--footerGreen);
+  border: 0 solid #3e5871;
+}
+
 /* Media Queries */
-@media (max-width: 767px) {
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 768px) {
 
-  footer.footer-distributed {
-    height: 150px;
-    padding: .5rem;
+    .email-form-container {
+      top: 30% !important;
+      padding: 1.5rem !important;
+    }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    footer.footer-distributed {
+      height: 150px;
+      padding: .5rem;
 
-    box-sizing: border-box;
-  }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  footer a.footer-links {
-    font-size: 1.4rem;
-    margin: .5rem;
-  }
+      box-sizing: border-box;
+    }
 
-  footer p {
-    font-size: .75rem;
-  }
+    footer a.footer-links {
+      font-size: 1.4rem;
+      margin: .5rem;
+    }
 
-  footer.footer-right a {
-    margin: 1rem;
-  }
+    footer p {
+      font-size: .75rem;
+    }
 
-  /* EMAIL CONTACT US */
-  .back-btn-container {
-    width: 100%;
-  }
-
-  .back-btn {
-    margin-left: 3rem;
-    border: none;
-    background: none;
-    justify-content: flex-start;
-  }
-
-  .new-email {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,60,.6)), url('https://images.pexels.com/photos/163116/typewriter-vintage-old-vintage-typewriter-163116.jpeg?cs=srgb&dl=antique-black-and-white-classic-163116.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5rem;
-  }
-  
-  .email-form-container {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%,-50%);
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 1px 2px 2px rgba(0,0,0,.5);
-    background: #fff;
-  }
-  
-  .email-form-container form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .top-form {
-    font-size: 1.5em;
-    line-height: 2em;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  input {
-    margin-bottom: 1rem;
-  }
-  
-  label {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .field {
-    padding: 10px;
-    width: 304px;
-    border: 1px solid #ccc;
-    font-size: .8em;
-  }
-  
-  .submit-btn {
-    margin-top: 15px;
-    padding: 15px;
-    font-size: .9em;
-    color: #fff;
-    background-color: #323d65;
-    border: 0 solid #3e5871;
-  }
-  
-
-@media (max-width: 767px) {
-
-  .new-email {
-    padding-top: 1rem;
-  }
-
-  .back-btn-container {
-    z-index: 100;
-    padding: 0;
-    margin: 0;
-  }
-
-  .back-btn {
-    margin: 0;
-  }
-} 
+    footer.footer-right a {
+      margin: 1rem;
+    }
+}
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 /* Portrait and Landscape */
@@ -190,14 +196,16 @@
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
     .new-email {
-      /* all: unset; */
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       padding: 0;
       margin: 0;
-      background-size: contain;
+    }
+
+    a.back-btn { 
+      font-size: .9rem;
     }
   
     input {
@@ -206,7 +214,7 @@
   
     .email-form-container {
       padding: 12px;
-      position: relative;
+      top: 50%;
     }
   
     .field {
@@ -215,5 +223,4 @@
       border: 1px solid #ccc;
       font-size: .8em;
     }
-
 }

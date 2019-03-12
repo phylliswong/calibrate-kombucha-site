@@ -100,7 +100,7 @@ navbar a {
 
 .nav-right.nav-links {
   margin-bottom: 1em;
-  margin-left: 1em;
+  margin-left: .75em;
 }
 
 .nav-right a {
@@ -113,9 +113,16 @@ navbar a {
 }
 
 .nav-right a:hover {
-  font-size: 1em;
   text-decoration: none;
-  color: var(--logoGreen);
+  color: var(--logoOrange);
+}
+.nav-item a:focus {
+ color: var(--logoOrange);
+}
+
+.nav-item a:active {
+  color: var(--logoOrange);
+  font-size: 1rem;
 }
 
 /* the "~" looks for any preceding sibling
@@ -169,7 +176,7 @@ navbar a {
   .nav-right {
     all: unset;
     display: flex;
-    margin-right: 2rem;
+    margin-right: 1rem;
     width: 100%;
     justify-content: flex-end;
     align-items: center;
@@ -179,13 +186,18 @@ navbar a {
   .nav-item {
     margin: 0;
     padding: 0;
-    margin-left: 3em;
+    margin-left: 2em;
   }
 
   .nav-item a {
     opacity: 1;
     position: relative;
     color: var(--logoGreen);
+  }
+
+  .nav-right a:hover {
+    text-decoration: none;
+    /* color: var(--logoOrange); */
   }
 
   /* Orange bar over the text */

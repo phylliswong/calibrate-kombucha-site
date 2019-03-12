@@ -8,7 +8,7 @@
 /* CSS variables */
 :root {
   --navbarGreen: #008542;
-  --navbarTransparency: linear-gradient(to right,#024115, rgba(44, 62, 80, .0));
+  --navbarTransparency: linear-gradient(to right,#024115, rgba(44, 62, 80, .2));
   --colorClear: rgba(0, 0, 0, 0);
   --copyright-grey: #8f9296;
   --logoOrange: #FABB51;

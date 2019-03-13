@@ -2,40 +2,43 @@
   FOOTER
 *******************/
 .footer-distributed {  
+  height: 150px;
+  padding: .5rem 0;
   background-color: var(--footerGreen);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   width: 100%;
   font: normal 16px sans-serif;
-  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* Footer links */
 .footer-links {
   color: white;
-  font-size: 2rem;
-  list-style-type: none;
+  font-size: 1.7rem;
+  /* list-style-type: none; */
   font-weight: bold;
-  transition: ease .25s;
-  line-height: 1.8;
-  text-decoration: none;
   transition: ease .25s;
 }
 
 .footer-links:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
-  text-decoration: underline;
+  color: white;
 }
 
 .footer-right {
   max-width: 180px;
 }
 
-.footer-distributed .footer-right {
-  margin-right: 0;
+.footer-distributed .footer-right:hover {
+  /* margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
-  max-width: 250px;
+  max-width: 250px; */
+  transform: scale(1.1);
 }
 
 .footer-distributed .footer-right a {
@@ -43,17 +46,13 @@
   width: 35px;
   height: 35px;
   background-color: var(--darkestGreen);
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 20px;
   color: #ffffff;
   text-align: center;
   line-height: 35px;
   margin-right: 3px;
   transition: all .25s;
-}
-
-.footer-distributed  {
-  text-align: center;
 }
 
 .footer-distributed .footer-right {
@@ -161,18 +160,6 @@ label {
     .email-form-container {
       top: 30% !important;
       padding: 1.5rem !important;
-    }
-
-    footer.footer-distributed {
-      height: 150px;
-      padding: .5rem;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      box-sizing: border-box;
     }
 
     footer a.footer-links {

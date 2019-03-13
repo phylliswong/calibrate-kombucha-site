@@ -125,16 +125,22 @@
   THANKS
 *******************/
 
+/* .subscribe-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+} */
+
 .thanks-header {
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .thanks-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
   padding: 1rem;
   margin-bottom: 1rem;

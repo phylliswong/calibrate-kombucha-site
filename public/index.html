@@ -29,19 +29,22 @@
 <body>
 
   <!-- POPUP LAYER -->
-  <div id="pop-up-layer" class="pop-up-layer">
-    <div id="pop-up" class="pop-up">
-      <h1 class="pop-up-title">Find Calibrate Kombucha</h1>
-      <h2 class="pop-up-sub">Subscribe to hear about pop-up locations</h2>
-      <div class="sub-fields">
-        <form class='pop-up-form' action="/subscribe" method="POST">
-          <input class="form-control email-input" placeholder="your email" name='from'>
-          <button class=" btn btn-primary email-sub" type="submit" action='/subscribe' method='POST' >subscribe</button>
-        </form>    
+  
+    <div id="pop-up-layer" class="pop-up-layer">
+        <div id="pop-up" class="pop-up">
+          <h1 class="pop-up-title">Find Calibrate Kombucha</h1>
+          <h2 class="pop-up-sub">Subscribe to hear about pop-up locations</h2>
+          <div class="sub-fields">
+            <form class='pop-up-form' action="/subscribe" method="POST">
+              <input class="form-control email-input" placeholder="your email" name='from'>
+              <button class=" btn btn-primary email-sub" type="submit" action='/subscribe' method='POST' >subscribe</button>
+            </form>    
+          </div>
+          <button id="close-pop-up" class="close-btn">x</button>
+        </div>
       </div>
-      <button id="close-pop-up" class="close-btn">x</button>
-    </div>
-  </div>
+
+  
 
   <!-- NAVBAR -->
   <navbar class="shadow-sm p-3 mb-5 bg-white">

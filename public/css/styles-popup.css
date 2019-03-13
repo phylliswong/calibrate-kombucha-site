@@ -10,20 +10,20 @@
 
 .pop-up-layer {
 	opacity: 0%;
-	display: none; /*This is changed this with javascript*/
+	display: none;
 	position: fixed;
+	top: 0; left: 0;
 	height: 100vh;
 	width: 100%;
-	background: rgba(44, 62, 80,.6); /*this is our overlay color*/
-	z-index: 3000; /*makes our layer above the rest of the page.*/
+	background: rgba(44, 62, 80,.6);
+	z-index: 3000;
 }
 
 .pop-up {
-	position: fixed; /*this makes our pop-up attached to the screen*/
-	top: 0; left: 0; right: 0; bottom: 0;
-	margin: auto; /*aligns our popup to the center*/
-	height: 15rem;
-	width: 40rem;
+	position: fixed;
+	top: 40%; left: 34%;
+	transform: translateX(-50%);
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -31,11 +31,14 @@
 	background: #2c3e50;
 	border-radius: 16px;
 	box-shadow: 0 4px 3px rgba(0,0,0,.3);
+
 	z-index: 10000000; /*Makes our pop-up above everything*/
 	animation: hop-down;
 	animation-duration: 100ms;
 	animation-fill-mode: both;
 	animation-timing-function: linear;
+
+	transform: translate(-50%, -20%);
 }
 
 .pop-up-title {
@@ -158,11 +161,11 @@
 
 @media screen and (min-width: 768px) {
 	.pop-up-layer {
-		max-width: 100%;
+		max-width: 500%;
 	}
 
 	.pop-up {
-		max-width: 100%;
+		max-width: 50%;
 	}
 }
 
@@ -172,12 +175,12 @@
 	}
 
 	.pop-up {
-		position: relative;
+		/* position: relative;
 		top: -5rem;
-		width: 50%;
+		width: 50%; */
 		min-width: 300px;
-		margin-left: 1rem;
-		margin-right: 1rem;
+		/* margin-left: 1rem;
+		margin-right: 1rem; */
 		height: 10rem;
 	}
 
@@ -202,5 +205,11 @@
 
 	.email-input, .email-sub {
 		font-size: .75rem;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.pop-up {
+		left: 10%;
 	}
 }

@@ -9,7 +9,6 @@ HERO
   background-image: url('../img/beverage-min-crop.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  /* padding: 1rem; */
 }
 
 .hero h1 {
@@ -43,15 +42,11 @@ HERO
   font-weight: 200;
 }
 
-
 @media screen and (max-width: 768px) {
-  /* .hero {
-    padding-bottom: 0;
-    height: auto;
-  } */
+ 
   .inner-hero {
-    background-size: contain;
-    height: 120px;
+    background-position: center;
+    height: 200px;
   }
 
   .overlay-text {

@@ -6,7 +6,6 @@
 /* eslint-disable prefer-destructuring */
 require('dotenv').config();
 const express = require('express');
-const secure = require('ssl-express-www');
 const exhbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -25,7 +24,6 @@ const auth = {
 
 const app = express();
 const nodemailerMailgun = nodemailer.createTransport(mg(auth));
-app.use(secure);
 
 /* ************************
         MIDDLEWARE
@@ -161,7 +159,4 @@ mongoose.connect(
 
 // SEVER
 const port = process.env.PORT || 3000;
-// app.listen(port, () => console.log(`Listening on port ${port}`));
-app.listen(port, () => {
-  console.log('Express server listening on port ' + port);
-});
+app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -113,11 +113,18 @@ app.post('/subscribe', (req, res) => {
         console.log('Error saving email', error.message);
         // eslint-disable-next-line no-alert
         alert('There was an error saving your email address. Please try again.');
+        res.redirect('/');
       });
   }).catch((err) => {
     console.log('Error: ', err);
+    alert('Please enter a valid email address');
+    res.redirect('/');
   });
 });
+
+app.get('/subscribe', (req, res) => {
+  res.redirect('/');
+})
 
 // UNJOIN email from list
 app.post('/unsubscribe', (req, res) => {

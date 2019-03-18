@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-undef */
 /* eslint-disable func-names */
 /* eslint-disable no-multi-assign */
@@ -14,7 +15,6 @@ const closeModal = document.getElementById('close-pop-up');
 // nav-bar button
 const subBtn = document.getElementById('sub-btn');
 
-// footer link click makes the popup appear
 subBtn.addEventListener('click', () => {
   popUpLayer.style.display = 'flex';
 });
@@ -43,6 +43,31 @@ const popUpFun = window.setInterval(() => {
   window.clearInterval(popUpFun);
 }, popUpSeconds * 3000);
 
+// function validEmail(email) {
+//   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   return re.test(email);
+// }
+
+// const email = document.getElementById('email');
+// const subscribeBtn = document.getElementById('subscribe-email-btn');
+
+// subscribeBtn.addEventListener('click', (e) => {
+//   if (!validEmail(e.value)) {
+//     alert('Please enter a valid email address.');
+//   }
+// })
+
+function validateEmail(inputText) {
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(inputText.value.match(mailformat)) {
+    document.pop-up-form.from.focus();
+    return true;
+  } else {
+    alert("You have entered an invalid email address!");
+    document.pop-up-form.from.focus();
+    return false;
+  }
+};
 // /////////////////
 
 // vars

@@ -48,12 +48,14 @@ const popUpFun = window.setInterval(() => {
 //   return re.test(email);
 // }
 
-const email = document.getElementById('email');
 const subscribeBtn = document.getElementById('subscribe-email-btn');
 
 function validateEmail(inputText) {
-  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if(inputText.value.match(mailformat)) {
+  const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const email = document.getElementById('email').value;
+  
+
+  if(email.match(mailformat)) {
     document.pop-up-form.from.focus();
     return true;
   } else {
@@ -64,7 +66,7 @@ function validateEmail(inputText) {
 };
 
 subscribeBtn.addEventListener('click', (e) => {
-  if (!validEmail(e.value)) {
+  if (!validateEmail(e.value)) {
     alert('Please enter a valid email address.');
   }
 })

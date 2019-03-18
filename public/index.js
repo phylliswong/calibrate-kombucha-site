@@ -48,14 +48,8 @@ const popUpFun = window.setInterval(() => {
 //   return re.test(email);
 // }
 
-// const email = document.getElementById('email');
-// const subscribeBtn = document.getElementById('subscribe-email-btn');
-
-// subscribeBtn.addEventListener('click', (e) => {
-//   if (!validEmail(e.value)) {
-//     alert('Please enter a valid email address.');
-//   }
-// })
+const email = document.getElementById('email');
+const subscribeBtn = document.getElementById('subscribe-email-btn');
 
 function validateEmail(inputText) {
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -68,6 +62,14 @@ function validateEmail(inputText) {
     return false;
   }
 };
+
+subscribeBtn.addEventListener('click', (e) => {
+  if (!validEmail(e.value)) {
+    alert('Please enter a valid email address.');
+  }
+})
+
+
 // /////////////////
 
 // vars

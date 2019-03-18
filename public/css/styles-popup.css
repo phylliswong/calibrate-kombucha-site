@@ -125,13 +125,6 @@
   THANKS
 *******************/
 
-/* .subscribe-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-} */
-
 .thanks-header {
   padding: 1rem;
   font-size: 2rem;
@@ -156,13 +149,19 @@
   border-radius: 1rem;
   background: var(--logoGreen);
 
-  color: white;
+	color: white;
+	box-shadow: 2px 3px 3px rgba(0,0,0,.5);
 }
 
 .thanks-return:hover, .thanks-return:focus, .thanks-return:active {
   background: var(--footerGreen);
   outline: none;
-  border: none;
+	border: none;
+	cursor: pointer;
+}
+
+.thanks-return:active {
+	box-shadow: 1px 2px 1px rgba(0,0,0,.5);
 }
 
 @media screen and (min-width: 768px) {

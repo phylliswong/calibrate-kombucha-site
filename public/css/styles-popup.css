@@ -96,6 +96,13 @@
   background: darkorange;
   border: 1px solid darkorange;
 }
+button:focus {outline:0 !important}
+button#subscribe-email-btn.btn.btn-primary.email-sub:focus, 
+button#subscribe-email-btn.btn.btn-primary.email-sub:active {
+  outline: none;
+	border: none;
+	cursor: pointer;
+}
 
 .close-btn {
 	position: absolute;
